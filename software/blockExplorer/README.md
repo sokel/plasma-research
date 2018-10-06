@@ -1,4 +1,1 @@
-From ./software/blockExplorer run 
-```
-go get -d ./...
-```
+To Install all dependencies run: `go get -d ./...`
