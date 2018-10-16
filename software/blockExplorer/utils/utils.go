@@ -27,3 +27,15 @@ func PrivateKeyStringToBytes(pvK string) []byte {
 func BytesToHexString(s []byte) string {
 	return hex.EncodeToString(s)
 }
+
+// SliceToBytesArray allows to convert slice to byte array for signature
+func SliceToBytesArray(s []byte) [65]byte {
+	var arr [65]byte
+	copy(arr[:], s[:65])
+	return arr
+}
+
+// FromByteArrayToSlice allows to convert byte array to slice for signature
+func FromByteArrayToSlice(s [65]byte) []byte {
+	return s[:64]
+}
